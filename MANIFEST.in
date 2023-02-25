@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include flight_management *.css
+recursive-include flight_management *.csv
+recursive-include flight_management *.html
+recursive-include flight_management *.ico
+recursive-include flight_management *.js
+recursive-include flight_management *.json
+recursive-include flight_management *.md
+recursive-include flight_management *.png
+recursive-include flight_management *.py
+recursive-include flight_management *.svg
+recursive-include flight_management *.txt
+recursive-exclude flight_management *.pyc
