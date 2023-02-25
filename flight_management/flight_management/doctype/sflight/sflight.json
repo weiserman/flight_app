@@ -8,8 +8,8 @@
  "engine": "InnoDB",
  "field_order": [
   "mandt",
-  "carrier_id",
   "connection_id",
+  "carrier_id",
   "flight_date",
   "price",
   "currency",
@@ -22,19 +22,22 @@
    "default": "800",
    "fieldname": "mandt",
    "fieldtype": "Data",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Client",
    "reqd": 1
   },
   {
-   "fetch_from": "connection_id.connid",
+   "fetch_from": "connection_id.carrier_id",
    "fieldname": "carrier_id",
    "fieldtype": "Data",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Carrier ID",
-   "reqd": 1
+   "read_only": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "connection_id",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -43,6 +46,7 @@
    "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "flight_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -50,22 +54,28 @@
    "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "price",
    "fieldtype": "Float",
-   "label": "Price"
+   "label": "Price",
+   "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "currency",
    "fieldtype": "Currency",
    "label": "Currency"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "plane_type",
    "fieldtype": "Select",
    "label": "Plane Type",
-   "options": "747-300\n747-800\n737"
+   "options": "747-300\n747-800\n737",
+   "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "seatsmax",
    "fieldtype": "Int",
    "label": "Maximum Seats"
@@ -78,7 +88,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-25 09:28:49.707897",
+ "modified": "2023-02-25 10:25:26.497948",
  "modified_by": "Administrator",
  "module": "Flight Management",
  "name": "SFLIGHT",

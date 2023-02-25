@@ -20,6 +20,7 @@
    "default": "800",
    "fieldname": "mandt",
    "fieldtype": "Data",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Client",
    "reqd": 1
@@ -65,7 +66,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-25 09:35:28.210283",
+ "modified": "2023-02-25 10:10:05.780021",
  "modified_by": "Administrator",
  "module": "Flight Management",
  "name": "SBOOK",
