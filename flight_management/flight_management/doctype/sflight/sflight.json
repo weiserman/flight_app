@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-02-25 09:23:59.942663",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mandt",
+  "carrier_id",
+  "connection_id",
+  "flight_date",
+  "price",
+  "currency",
+  "plane_type",
+  "seatsmax",
+  "seatsocc"
+ ],
+ "fields": [
+  {
+   "default": "800",
+   "fieldname": "mandt",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "connection_id.connid",
+   "fieldname": "carrier_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Carrier ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "connection_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Connection ID",
+   "options": "SPFLI",
+   "reqd": 1
+  },
+  {
+   "fieldname": "flight_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Flight Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Float",
+   "label": "Price"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Currency",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "plane_type",
+   "fieldtype": "Select",
+   "label": "Plane Type",
+   "options": "747-300\n747-800\n737"
+  },
+  {
+   "fieldname": "seatsmax",
+   "fieldtype": "Int",
+   "label": "Maximum Seats"
+  },
+  {
+   "fieldname": "seatsocc",
+   "fieldtype": "Int",
+   "label": "Seats Occupied"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-25 09:28:49.707897",
+ "modified_by": "Administrator",
+ "module": "Flight Management",
+ "name": "SFLIGHT",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

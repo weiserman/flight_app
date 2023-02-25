@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-02-25 09:17:13.527352",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mandt",
+  "carrier_id",
+  "connid",
+  "airport_from",
+  "airport_to",
+  "country_from",
+  "country_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "mandt",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client",
+   "reqd": 1
+  },
+  {
+   "fieldname": "carrier_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Carrier ID",
+   "options": "SCARR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "connid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Connection ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "airport_from",
+   "fieldtype": "Link",
+   "label": "Airport From",
+   "options": "SAIRPORT"
+  },
+  {
+   "fieldname": "airport_to",
+   "fieldtype": "Link",
+   "label": "Airport To",
+   "options": "SAIRPORT"
+  },
+  {
+   "fieldname": "country_from",
+   "fieldtype": "Link",
+   "label": "Country From",
+   "options": "Country"
+  },
+  {
+   "fieldname": "country_to",
+   "fieldtype": "Link",
+   "label": "Country To",
+   "options": "Country"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-25 09:20:26.187333",
+ "modified_by": "Administrator",
+ "module": "Flight Management",
+ "name": "SPFLI",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
