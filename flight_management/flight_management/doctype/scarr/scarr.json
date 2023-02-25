@@ -16,24 +16,33 @@
  ],
  "fields": [
   {
+   "default": "800",
    "fieldname": "mandt",
    "fieldtype": "Data",
-   "label": "Client"
+   "hidden": 1,
+   "label": "Client",
+   "reqd": 1
   },
   {
    "fieldname": "carrid",
    "fieldtype": "Data",
-   "label": "Carrier ID"
+   "in_list_view": 1,
+   "label": "Carrier ID",
+   "reqd": 1
   },
   {
    "fieldname": "carrname",
    "fieldtype": "Data",
-   "label": "Carrier Name"
+   "in_list_view": 1,
+   "label": "Carrier Name",
+   "reqd": 1
   },
   {
    "fieldname": "carrcode",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Carrier Code",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -44,7 +53,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-25 09:13:17.708763",
+ "modified": "2023-02-25 09:52:40.981510",
  "modified_by": "Administrator",
  "module": "Flight Management",
  "name": "SCARR",

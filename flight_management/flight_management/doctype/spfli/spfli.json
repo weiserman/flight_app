@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{carrier_id}{connid}",
  "creation": "2023-02-25 09:17:13.527352",
  "default_view": "List",
  "doctype": "DocType",
@@ -13,20 +14,21 @@
   "airport_from",
   "airport_to",
   "country_from",
-  "country_to"
+  "country_to",
+  "fltime"
  ],
  "fields": [
   {
+   "default": "800",
    "fieldname": "mandt",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Client",
    "reqd": 1
   },
   {
    "fieldname": "carrier_id",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Carrier ID",
    "options": "SCARR",
    "reqd": 1
@@ -34,41 +36,56 @@
   {
    "fieldname": "connid",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Connection ID",
    "reqd": 1
   },
   {
    "fieldname": "airport_from",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Airport From",
-   "options": "SAIRPORT"
+   "options": "SAIRPORT",
+   "reqd": 1
   },
   {
    "fieldname": "airport_to",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Airport To",
-   "options": "SAIRPORT"
+   "options": "SAIRPORT",
+   "reqd": 1
   },
   {
    "fieldname": "country_from",
    "fieldtype": "Link",
    "label": "Country From",
-   "options": "Country"
+   "options": "Country",
+   "reqd": 1
   },
   {
    "fieldname": "country_to",
    "fieldtype": "Link",
    "label": "Country To",
-   "options": "Country"
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fltime",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Flight Time",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-25 09:20:26.187333",
+ "modified": "2023-02-25 10:01:34.844890",
  "modified_by": "Administrator",
  "module": "Flight Management",
  "name": "SPFLI",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

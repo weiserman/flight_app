@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:airport_name",
  "creation": "2023-02-25 09:11:06.849751",
  "default_view": "List",
  "doctype": "DocType",
@@ -13,14 +14,18 @@
  ],
  "fields": [
   {
+   "default": "800",
    "fieldname": "mandt",
    "fieldtype": "Data",
-   "label": "Client"
+   "hidden": 1,
+   "label": "Client",
+   "reqd": 1
   },
   {
    "fieldname": "airport_name",
    "fieldtype": "Data",
-   "label": "Airport Name"
+   "label": "Airport Name",
+   "unique": 1
   },
   {
    "fieldname": "time_zone",
@@ -30,10 +35,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-25 09:11:06.849751",
+ "modified": "2023-02-25 09:50:30.013566",
  "modified_by": "Administrator",
  "module": "Flight Management",
  "name": "SAIRPORT",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
